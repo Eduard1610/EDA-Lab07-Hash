@@ -1,5 +1,6 @@
 
 public interface HashTable{
+	
     /**
      * Retorna el numero de clave-valor registrado en la tabla hash.
      *
@@ -15,8 +16,8 @@ public interface HashTable{
     boolean isEmpty();
 
     /**
-     * Retorna {@code true} Si la tabla contiene una clave determinada. Retorna {@code true} si y solo si 
-     * existe la clave {@code k} una sola vez)
+     * Retorna true Si la tabla contiene una clave determinada. Retorna true si y solo si 
+     * existe la clave k una sola vez
      *
      * @param key la clave cuya existencia sera validada
      * @return {@code true} si la tabla contiene un la clave determinada
