@@ -1,10 +1,10 @@
 
 public class TablaHash implements HashTable {
-	
+
 	class Node {
 		protected String key;
 		protected int value;
-		
+
 		public Node(String key, int value) {
 			this.key = key;
 			this.value = value;
@@ -25,22 +25,22 @@ public class TablaHash implements HashTable {
 		public void setValue(int value) {
 			this.value = value;
 		}
-		
+
 	}
-	
+
 	Node[] arr;
 	private int capacity = 1000000;
-	
+
     public TablaHash() {
         arr = new Node[capacity];
     }
-    
- 
+
+
 
 	@Override
 	public int size() {
 		int espaciosOcupados = 0;
-		// Al ser un arreglo basta con recorrer e identificar que espacios están ocupados
+		// Al ser un arreglo basta con recorrer e identificar que espacios estï¿½n ocupados
 		for (int i=0; i<capacity; i++) {
 			if (arr[i] != null) {
 				espaciosOcupados++;
@@ -58,17 +58,21 @@ public class TablaHash implements HashTable {
 
 	@Override
 	public boolean containsKey(Object key) {
-		// Aplicamos la función hash a key para que nos retorne directamente el índice
-		// Si aplicamos el hash a la llave, luego buscamos ese índice en el arreglo y existe un elemento
+		// Aplicamos la funciï¿½n hash a key para que nos retorne directamente el ï¿½ndice
+		// Si aplicamos el hash a la llave, luego buscamos ese ï¿½ndice en el arreglo y existe un elemento
 		// Entonces retorna true
-		if(arr[key.hashCode()] != null) 
+		if(arr[key.hashCode()] != null)
 			return true;
 		return false;
 	}
 
 	@Override
 	public boolean containsValue(Object value) {
-		// TODO Auto-generated method stub
+		//Se busca dentro del array de nodos el valor buscado
+		for (int i=0; i<capacity; i++) {
+			if (arr[i].getValue.equals(value))
+				return true;
+		}
 		return false;
 	}
 
@@ -94,13 +98,13 @@ public class TablaHash implements HashTable {
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	@Override
-	public int hashCode() { // Esta función genera los códigos hash para los índices
+	public int hashCode() { // Esta funciï¿½n genera los cï¿½digos hash para los ï¿½ndices
 	    final int prime = 31;
-	    int result = prime; // (falta definir la función) // Elijan una sencilla
+	    int result = prime; // (falta definir la funciï¿½n) // Elijan una sencilla
 	    return result;
 	}
 }
