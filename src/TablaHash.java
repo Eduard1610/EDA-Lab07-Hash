@@ -78,8 +78,9 @@ public class TablaHash implements HashTable {
 
 	@Override
 	public Integer get(String key) {
-		// TODO Auto-generated method stub
-		return null;
+		int h = key.hashCode();
+		int value = arr[h].getValue;
+		return value;
 	}
 
 	@Override
