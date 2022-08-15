@@ -78,21 +78,21 @@ public class TablaHash implements HashTable {
 
 	@Override
 	public Integer get(String key) {
-		int h = key.hashCode();
-		int value = arr[h].getValue;
-		return value;
+	//	int h = key.hashCode();
+	//	int value = arr[h].getValue;
+	//	return value;
 	}
 
 	@Override
 	public Integer put(String key, Integer value) {
 		// TODO Auto-generated method stub
-		int h = key.hashCode();
-		if (arr[h] == null) {
-			arr[h].setValue(value);
-		}
-		else {
-			h = key.hashCode();
-		}
+	//	int h = key.hashCode();
+	//	if (arr[h] == null) {
+	//		arr[h].setValue(value);
+	//	}
+	//	else {
+	//		h = key.hashCode();
+	//	}
 		return null;
 	}
 
