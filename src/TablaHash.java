@@ -99,7 +99,9 @@ public class TablaHash implements HashTable {
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-
+		for (int i = 0; i < capacity; i++) {
+			arr[i]=null;
+		}
 	}
 
 	@Override
