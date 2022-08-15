@@ -86,7 +86,13 @@ public class TablaHash implements HashTable {
 	@Override
 	public Integer put(String key, Integer value) {
 		// TODO Auto-generated method stub
-
+		int h = key.hashCode();
+		if (arr[h] == null) {
+			arr[h].setValue(value);
+		}
+		else {
+			h = key.hashCode();
+		}
 		return null;
 	}
 
