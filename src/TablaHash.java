@@ -79,8 +79,9 @@ public class TablaHash implements HashTable {
 	@Override
 	public Integer get(String key) {
 		int h = key.hashCode();
-		int value = arr[h].getValue;
-		return value;
+		if(arr[h] == null)
+			return null;
+		return arr[h].getValue;
 	}
 
 	@Override
