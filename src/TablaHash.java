@@ -70,7 +70,8 @@ public class TablaHash implements HashTable {
 	public boolean containsValue(Object value) {
 		//Se busca dentro del array de nodos el valor buscado
 		for (int i=0; i<capacity; i++) {
-			if (arr[i].getValue == value)
+			Integer valorNodo = (Integer) arr[i].getValue;
+			if (valorNodo.equals(value))
 				return true;
 		}
 		return false;
@@ -78,9 +79,11 @@ public class TablaHash implements HashTable {
 
 	@Override
 	public Integer get(String key) {
+
 	//	int h = key.hashCode();
 	//	int value = arr[h].getValue;
 	//	return value;
+
 	}
 
 	@Override
