@@ -39,7 +39,7 @@ public class TestHash {
 		else
 			System.out.println("No existe un valor asociado para la llave " + llaveRemove);
 		//Testeo: Funcion clear
-		tablaEnteros.clear();
+		//tablaEnteros.clear();
 		System.out.println("Se removio con exito todos los valores de la tabla Hash");
 	}
 

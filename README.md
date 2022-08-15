@@ -40,8 +40,8 @@
 <tr><td colspan="6">INTEGRANTES:
     <ul>
         <li>Durand Obando, Eduardo Franshua</li>
-        <li>Integrante 2</li>
-        <li>Integrante 3</li>
+        <li>Kevin Jheeremy Alvarez Astete</li>
+        <li>Henry Isaias Galvez Quilla 3</li>
 </td>
 </<tr>
 <tr><td colspan="6">DOCENTES:
@@ -88,7 +88,7 @@
 
 ## RESOLUCIÓN
 Dentro del repositorio contamos con una carpeta **src**, la cual contiene 4 archivos .java:
-    
+
 1. **HashTable**: Interfaz que define los métodoso de nuestra tabla hash.
 2. **TablaHash**: Clase de la tabla hash que emplea la interfaz **HashTable**
 3. **TestHash**: Clase de testeo.
@@ -98,11 +98,11 @@ Dentro del repositorio contamos con una carpeta **src**, la cual contiene 4 arch
     La tabla hash empleada en este laboratorio tiene la estructura de un arreglo con una determinada cantidad de espacios.
 
     <img src="img/arreglo.png">
-    
+
     Los métodos propuestos para esta tabla se presentan a continuación:
 
     - **int size()** //Retorna el numero de clave-valor registrados en la tabla hash.
-    
+
     - **boolean isEmpty()** // Retorna true si la tabla hash no contiene registros
 
     - **boolean containsKey(Object key)** // Retorna true si la tabla contiene una clave determinada.
@@ -118,12 +118,25 @@ Dentro del repositorio contamos con una carpeta **src**, la cual contiene 4 arch
     - **void clear()** // Elimina todos los registros de la tabla hash.
 
     - **int hashCode()** // Retorna el codigo hash para TODA la tabla hash.
-    
+
+    - Implementacion: Se utilizaron  los códigos hash de desplazamiento cíclico; una variante del código hash polinómico sustituye la multiplicación por a por un desplazamiento cíclico de una suma parcial en un número determinado de bits. Se han hecho experimentos para calcular el número de colisiones en 25.000 palabras en inglés. Se demuestra que 5, 6, 7, 9 y 13 son buenas elecciones de valores de desplazamiento.
+
+```sh
+    static int hashCode(String s) {
+      int h = 0;
+      for (int i = 0; i < s.length(); i++) {
+        h = (h << 5) | (h >>> 27); // 5-bit cyclic shift of the running sum
+        h += (int) s.charAt(i); // add in next character
+      }
+      return h;
+    }
+```
+
     - **String toString()** // Muestra todos los elementos de la tabla hash.
 
 
 ## REFERENCIAS
-[1] Weiss M., Data Structures & Problem Solving Using Java, 2010, Addison-Wesley. 
+[1] Weiss M., Data Structures & Problem Solving Using Java, 2010, Addison-Wesley.
 
 [2] https://www.cpp.edu/~ftang/courses/CS240/lectures/hashing.html
 

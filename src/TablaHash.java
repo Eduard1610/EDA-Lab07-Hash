@@ -79,16 +79,23 @@ public class TablaHash implements HashTable {
 
 	@Override
 	public Integer get(String key) {
-		int h = key.hashCode();
-		if(arr[h] == null)
-			return null;
-		return arr[h].getValue;
+
+	//	int h = key.hashCode();
+	//	int value = arr[h].getValue;
+	//	return value;
+
 	}
 
 	@Override
 	public Integer put(String key, Integer value) {
 		// TODO Auto-generated method stub
-
+	//	int h = key.hashCode();
+	//	if (arr[h] == null) {
+	//		arr[h].setValue(value);
+	//	}
+	//	else {
+	//		h = key.hashCode();
+	//	}
 		return null;
 	}
 
@@ -101,7 +108,9 @@ public class TablaHash implements HashTable {
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-
+		for (int i = 0; i < capacity; i++) {
+			arr[i]=null;
+		}
 	}
 
 	@Override
