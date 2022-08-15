@@ -26,14 +26,14 @@ public class TestHash {
 			System.out.println("No se encontro el valor");
 		//Testeo: Funcion get
 		String llaveGet = "10";
-		int valueGet = tablaEnteros.get(llaveGet);
+		Integer valueGet = tablaEnteros.get(llaveGet);
 		if (valueGet != null)
 			System.out.println("La llave " + llaveGet + " le corresponde el valor de " + valueGet);
 		else
 			System.out.println("No existe un valor asociado para la llave " + llaveGet);
 		//Testeo: Funcion remove
 		String llaveRemove = "5";
-		int valueRemove = tablaEnteros.get(llaveRemove);
+		Integer valueRemove = tablaEnteros.get(llaveRemove);
 		if (valueRemove != null)
 			System.out.println("Se removio con exito el valor " + valueRemove);
 		else
